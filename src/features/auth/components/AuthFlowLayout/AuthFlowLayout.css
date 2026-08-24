@@ -1,0 +1,258 @@
+.auth-flow-page__form-shell {
+  max-width: 30rem;
+}
+
+.auth-flow-page__icon {
+  display: grid;
+  width: 4.25rem;
+  height: 4.25rem;
+  margin: 1.35rem auto 0;
+  border: 1px solid rgba(42, 108, 165, 0.14);
+  border-radius: 1.35rem;
+  background:
+    linear-gradient(145deg, rgba(99, 171, 253, 0.16), rgba(251, 176, 64, 0.13)),
+    var(--white);
+  box-shadow: 0 0.9rem 2.2rem rgba(10, 49, 86, 0.1);
+  color: var(--azure-28);
+  place-items: center;
+}
+
+.auth-flow-page__icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.auth-flow-page__header {
+  margin-block-start: 1rem;
+  text-align: center;
+}
+
+.auth-flow-page__header .auth-page__eyebrow {
+  justify-content: center;
+}
+
+.auth-flow-page__header .auth-page__subtitle {
+  margin-inline: auto;
+}
+
+.auth-flow-page__content {
+  margin-block-start: 1.65rem;
+}
+
+.auth-flow-page__content .auth-form {
+  margin-block-start: 0;
+}
+
+.auth-flow-page__actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.auth-flow-page__primary-link,
+.auth-flow-page__secondary-link {
+  display: inline-flex;
+  min-height: 3.2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.auth-flow-page__primary-link {
+  margin-block-start: 0;
+}
+
+.auth-flow-page__secondary-link {
+  border: 1px solid rgba(42, 108, 165, 0.18);
+  background: rgba(42, 108, 165, 0.06);
+  color: var(--azure-28);
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.auth-flow-page__secondary-link:hover {
+  border-color: rgba(42, 108, 165, 0.36);
+  background: rgba(42, 108, 165, 0.11);
+}
+
+.auth-flow-page__email {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.55rem 0.85rem;
+  margin: 0 auto 1.15rem;
+  overflow-wrap: anywhere;
+  border: 1px solid rgba(42, 108, 165, 0.13);
+  border-radius: 0.75rem;
+  background: rgba(42, 108, 165, 0.06);
+  color: var(--azure-28);
+  direction: ltr;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  unicode-bidi: plaintext;
+}
+
+.auth-flow-page__helper-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem 0.75rem;
+  margin-block-start: 1rem;
+  color: var(--azure-47);
+  font-size: 0.76rem;
+}
+
+.auth-flow-page__resend-email {
+  margin-block-end: 1rem;
+}
+
+.auth-flow-page__text-button,
+.auth-flow-page__text-link {
+  padding: 0.25rem;
+  border: 0;
+  background: transparent;
+  color: var(--azure-28);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.auth-flow-page__text-button:hover,
+.auth-flow-page__text-link:hover {
+  color: var(--azure-41);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.auth-flow-page__text-button:disabled {
+  cursor: wait;
+  opacity: 0.58;
+}
+
+.auth-flow-page__feedback,
+.auth-flow-page__development-note {
+  padding: 0.7rem 0.8rem;
+  margin: 0.85rem 0 0;
+  border-radius: 0.75rem;
+  font-size: 0.72rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.auth-flow-page__feedback {
+  border: 1px solid rgba(42, 108, 165, 0.18);
+  background: rgba(42, 108, 165, 0.07);
+  color: var(--azure-28);
+}
+
+.auth-flow-page__feedback--success {
+  border-color: rgba(18, 133, 85, 0.24);
+  background: rgba(18, 133, 85, 0.08);
+  color: #0c6842;
+}
+
+.auth-flow-page__feedback--error {
+  border-color: rgba(180, 35, 24, 0.2);
+  background: rgba(180, 35, 24, 0.06);
+  color: #8f1c13;
+}
+
+.auth-flow-page__feedback--info {
+  border-color: rgba(42, 108, 165, 0.18);
+  background: rgba(42, 108, 165, 0.07);
+  color: var(--azure-28);
+}
+
+.auth-flow-page__status-actions {
+  margin-block-start: 1rem;
+}
+
+.auth-flow-page__development-note {
+  border: 1px dashed rgba(251, 176, 64, 0.48);
+  background: rgba(251, 176, 64, 0.09);
+  color: var(--azure-34);
+}
+
+.auth-flow-page__back-link {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  margin: 1.05rem auto 0;
+  color: var(--azure-47);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-flow-page__back-link:hover {
+  color: var(--azure-28);
+}
+
+.auth-flow-page__primary-link:focus-visible,
+.auth-flow-page__secondary-link:focus-visible,
+.auth-flow-page__text-button:focus-visible,
+.auth-flow-page__text-link:focus-visible,
+.auth-flow-page__back-link:focus-visible {
+  border-radius: 0.4rem;
+  outline: 0.2rem solid rgba(42, 108, 165, 0.28);
+  outline-offset: 0.18rem;
+}
+
+.password-requirements {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  margin: -0.15rem 0 0;
+  border: 1px solid rgba(42, 108, 165, 0.1);
+  border-radius: 0.8rem;
+  background: rgba(42, 108, 165, 0.04);
+  color: var(--azure-47);
+  font-size: 0.72rem;
+  list-style: none;
+}
+
+.password-requirements li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.password-requirements li::before {
+  width: 0.45rem;
+  height: 0.45rem;
+  flex: none;
+  border: 1px solid rgba(42, 108, 165, 0.32);
+  border-radius: 50%;
+  background: var(--white);
+  content: "";
+}
+
+.password-requirements__item--met {
+  color: var(--azure-28);
+  font-weight: 700;
+}
+
+.password-requirements__item--met::before {
+  border-color: var(--azure-41);
+  background: var(--blue);
+  box-shadow: 0 0 0 0.18rem var(--azure-41-10);
+}
+
+@media (max-width: 35rem) {
+  .auth-flow-page__icon {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-block-start: 1rem;
+  }
+
+  .auth-flow-page__content {
+    margin-block-start: 1.35rem;
+  }
+}

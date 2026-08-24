@@ -1,0 +1,38 @@
+.login-page__form-shell {
+  max-width: 30rem;
+}
+
+.login-page__header {
+  margin-block-start: 2.25rem;
+}
+
+.login-form {
+  margin-block-start: 2rem;
+}
+
+.login-form__forgot-link {
+  width: fit-content;
+  margin-block-start: -0.35rem;
+  color: var(--azure-28);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-form__forgot-link:hover {
+  color: var(--azure-41);
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.login-form__forgot-link:focus-visible {
+  border-radius: 0.25rem;
+  outline: 0.2rem solid rgba(42, 108, 165, 0.28);
+  outline-offset: 0.2rem;
+}
+
+@media (max-width: 35rem) {
+  .login-page__header {
+    margin-block-start: 2.75rem;
+  }
+}

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  direction: rtl;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 100px;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--azure-28);
+  background-color: var(--white);
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  text-align: start;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding-inline: 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-container {
+    padding-inline: 64px;
+  }
+}
+
+
+
+:root {
+  --azure-28: #0f4c81;
+  --azure-19: #0a3156;
+  --azure-47: #64748b;
+  --azure-17: #1e293b;
+  --azure-41-10: rgba(42, 108, 165, 0.1);
+  --azure-41: #2a6ca5;
+  --azure-34: #4b5563;
+  --orange-62: #fbb040;
+  --orange-71: #fdc06b;
+  --blue: #63abfd;
+  --white: #ffffff;
+  --grey-91: #e5e7eb;
+  --g600: #49475a;
+  --g400: #9794aa;
+  --stroke: #edf2f6;
+  --input-border: rgba(19, 73, 139, 0.6);
+  --input-background: rgba(19, 73, 139, 0.05);
+  --font-family-primary: "Tajawal", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --stroke-sm: 1px;
+  --stroke-lg: 4px;
+
+  --color-blue-28: #0f4c81;
+  --color-blue-19: #0a3156;
+  --color-blue-47: #64748b;
+  --color-blue-17: #1e293b;
+  --color-blue-41: #2a6ca5;
+  --color-blue-34: #4b5563;
+  --color-orange-62: #fbb040;
+  --color-orange-71: #fdc06b;
+  --color-purple-700: #5925dc;
+  --color-purple-500: #7a5af8;
+  --color-purple-400: #9b8afb;
+  --color-pink: #ffa5cb;
+  --color-light-blue: #63abfd;
+  --color-light-purple: #e697ff;
+  --color-green: #219f94;
+  --color-dark: #191a15;
+  --color-stroke: #edf2f6;
+  --color-input-border: rgba(19, 73, 139, 0.6);
+  --color-yellow: #ffb35c;
+  --color-violet: #9f55ff;
+  --color-deep-violet: #370aff;
+  --color-white: #ffffff;
+  --color-grey-91: #e5e7eb;
+  --color-cyan-47: #2c9dc2;
+  --font-family-main: "Tajawal", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --stroke-thin: 1px;
+  --stroke-thick: 4px;
+}

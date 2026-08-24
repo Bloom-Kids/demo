@@ -1,0 +1,200 @@
+.contact-banner {
+  position: relative;
+  overflow: hidden;
+  padding-block: 70px 90px;
+  background:
+    radial-gradient(circle at 14% 40%, rgba(99, 171, 253, 0.1), transparent 22%),
+    var(--color-white);
+  scroll-margin-block-start: 100px;
+}
+
+.contact-banner__content {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  width: 90%;
+  max-width: 1280px;
+  min-height: 170px;
+  margin-inline: auto;
+  padding: 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  background:
+    linear-gradient(
+      120deg,
+      var(--color-blue-19),
+      var(--color-blue-28),
+      var(--color-blue-41),
+      var(--color-blue-19)
+    );
+  background-size: 280% 280%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  box-shadow: 0 24px 58px rgba(10, 49, 86, 0.22);
+  animation: contact-gradient-flow 11s ease-in-out infinite;
+}
+
+.contact-banner__content::before,
+.contact-banner__content::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.contact-banner__content::before {
+  width: 250px;
+  height: 250px;
+  inset-block-start: -130px;
+  inset-inline-start: -70px;
+  border: 36px solid rgba(255, 255, 255, 0.07);
+  animation: contact-ring-float 7s ease-in-out infinite;
+}
+
+.contact-banner__content::after {
+  width: 170px;
+  height: 170px;
+  inset-block-end: -110px;
+  inset-inline-end: 18%;
+  background-color: rgba(251, 176, 64, 0.12);
+  filter: blur(2px);
+  animation: contact-orb-float 6s ease-in-out infinite alternate;
+}
+
+.contact-banner__title {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--color-white);
+  font-size: clamp(1.5rem, 2.5vw, 2.15rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.contact-banner__socials {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  direction: ltr;
+}
+
+.contact-banner__social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 14px;
+  text-decoration: none;
+  opacity: 0.94;
+  backdrop-filter: blur(8px);
+  transition: opacity 0.25s ease, background-color 0.25s ease, border-radius 0.25s ease, transform 0.25s ease;
+}
+
+.contact-banner__social-link svg {
+  width: 23px;
+  height: 23px;
+}
+
+.contact-banner__social-link:hover {
+  color: var(--color-blue-19);
+  background-color: var(--color-white);
+  border-radius: 50%;
+  opacity: 1;
+  transform: translateY(-5px) rotate(-4deg);
+}
+
+.contact-banner__button {
+  position: relative;
+  z-index: 1;
+  min-width: 170px;
+  min-height: 50px;
+  padding-inline: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--color-blue-19);
+  background-color: var(--color-white);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(10, 49, 86, 0.22);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-banner__button svg {
+  width: 21px;
+  height: 21px;
+}
+
+.contact-banner__button:hover {
+  color: var(--color-white);
+  background-color: var(--color-orange-62);
+  transform: translateY(-3px);
+}
+
+.contact-banner__button:focus-visible,
+.contact-banner__social-link:focus-visible {
+  outline: 3px solid var(--color-orange-62);
+  outline-offset: 4px;
+}
+
+@keyframes contact-gradient-flow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes contact-ring-float {
+  50% {
+    transform: translate(24px, 18px) rotate(20deg);
+  }
+}
+
+@keyframes contact-orb-float {
+  to {
+    transform: translateY(-42px) scale(1.16);
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-banner__content {
+    padding-inline: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-banner__title {
+    text-align: start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-banner__content,
+  .contact-banner__content::before,
+  .contact-banner__content::after {
+    animation: none;
+  }
+
+  .contact-banner__social-link,
+  .contact-banner__button {
+    transition: none;
+  }
+}

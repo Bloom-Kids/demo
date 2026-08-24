@@ -1,0 +1,387 @@
+.auth-welcome {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(99, 171, 253, 0.14), transparent 30%),
+    radial-gradient(circle at 16% 86%, rgba(251, 176, 64, 0.1), transparent 25%),
+    #f7faff;
+}
+
+.auth-welcome::before {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(42, 108, 165, 0.1) 1px, transparent 1px);
+  background-size: 1.75rem 1.75rem;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.38), transparent 80%);
+  content: "";
+  pointer-events: none;
+}
+
+.auth-welcome__header {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(calc(100% - 2rem), 78rem);
+  min-height: 5.5rem;
+  margin-inline: auto;
+}
+
+.auth-welcome__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--azure-19);
+  text-decoration: none;
+}
+
+.auth-welcome__logo-window {
+  position: relative;
+  display: block;
+  width: 3.25rem;
+  height: 3.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(42, 108, 165, 0.14);
+  border-radius: 1rem;
+  background: var(--white);
+  box-shadow: 0 0.75rem 2rem rgba(15, 76, 129, 0.09);
+}
+
+.auth-welcome__logo-window img {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  width: 6.1rem;
+  max-width: none;
+  transform: translate(50%, -50%);
+}
+
+.auth-welcome__brand > span:last-child {
+  display: grid;
+}
+
+.auth-welcome__brand strong {
+  font-size: 1.05rem;
+}
+
+.auth-welcome__brand small {
+  color: var(--azure-47);
+  font-size: 0.68rem;
+}
+
+.auth-welcome__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.auth-welcome__nav a,
+.auth-welcome__actions a {
+  display: inline-flex;
+  min-height: 2.8rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.auth-welcome__nav-login {
+  padding-inline: 1rem;
+  color: var(--azure-28);
+}
+
+.auth-welcome__nav-register {
+  padding-inline: 1.2rem;
+  background: var(--azure-19);
+  box-shadow: 0 0.65rem 1.5rem rgba(10, 49, 86, 0.16);
+  color: var(--white);
+}
+
+.auth-welcome__hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(28rem, 1.1fr);
+  gap: clamp(2rem, 5vw, 5.5rem);
+  width: min(calc(100% - 2rem), 78rem);
+  min-height: calc(100vh - 5.5rem);
+  align-items: center;
+  padding-block: 2rem 4rem;
+  margin-inline: auto;
+}
+
+.auth-welcome__content {
+  max-width: 38rem;
+  padding-inline-start: clamp(0rem, 2vw, 1.5rem);
+}
+
+.auth-welcome__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(42, 108, 165, 0.12);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--azure-41);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.auth-welcome__eyebrow::before {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--orange-62);
+  box-shadow: 0 0 0 0.3rem rgba(251, 176, 64, 0.14);
+  content: "";
+}
+
+.auth-welcome__content h1 {
+  margin: 1.4rem 0 0;
+  color: var(--azure-19);
+  font-size: clamp(2.4rem, 5vw, 4.6rem);
+  line-height: 1.17;
+  letter-spacing: -0.035em;
+}
+
+.auth-welcome__content h1 span {
+  display: block;
+  background: linear-gradient(100deg, var(--azure-41), var(--blue));
+  background-clip: text;
+  color: transparent;
+}
+
+.auth-welcome__content > p {
+  max-width: 34rem;
+  margin: 1.25rem 0 0;
+  color: var(--azure-47);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 2;
+}
+
+.auth-welcome__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block-start: 2rem;
+}
+
+.auth-welcome__primary-action {
+  gap: 0.6rem;
+  min-width: 12.5rem;
+  padding-inline: 1.35rem;
+  background: linear-gradient(120deg, var(--azure-19), var(--azure-28));
+  box-shadow: 0 1rem 2rem rgba(10, 49, 86, 0.18);
+  color: var(--white);
+}
+
+.auth-welcome__primary-action svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+  transform: scaleX(-1);
+}
+
+.auth-welcome__secondary-action {
+  min-width: 10.5rem;
+  padding-inline: 1.25rem;
+  border: 1px solid rgba(42, 108, 165, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--azure-28);
+}
+
+.auth-welcome__nav a:hover,
+.auth-welcome__actions a:hover {
+  transform: translateY(-0.125rem);
+}
+
+.auth-welcome__nav-register:hover,
+.auth-welcome__primary-action:hover {
+  box-shadow: 0 1.1rem 2.5rem rgba(10, 49, 86, 0.22);
+}
+
+.auth-welcome__nav a:focus-visible,
+.auth-welcome__actions a:focus-visible,
+.auth-welcome__brand:focus-visible {
+  outline: 0.1875rem solid rgba(42, 108, 165, 0.28);
+  outline-offset: 0.2rem;
+}
+
+.auth-welcome__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1.2rem;
+  padding: 0;
+  margin: 2rem 0 0;
+  color: var(--azure-47);
+  font-size: 0.78rem;
+  list-style: none;
+}
+
+.auth-welcome__features li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.auth-welcome__features span {
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 0.12rem solid var(--white);
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 0.15rem rgba(99, 171, 253, 0.2);
+}
+
+.auth-welcome__showcase {
+  min-height: min(44rem, calc(100vh - 8rem));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 2.25rem;
+  box-shadow: 0 2.5rem 6rem rgba(10, 49, 86, 0.2);
+}
+
+.auth-welcome__showcase .auth-showcase__content {
+  padding-block-start: 1.5rem;
+}
+
+.auth-welcome__showcase .auth-showcase__stage {
+  min-height: 24rem;
+}
+
+.auth-welcome__showcase .auth-showcase__copy {
+  display: none;
+}
+
+@media (max-width: 68rem) {
+  .auth-welcome__hero {
+    grid-template-columns: minmax(0, 1fr) minmax(23rem, 0.85fr);
+    gap: 2rem;
+  }
+
+  .auth-welcome__showcase .auth-showcase__floating-card--achievement {
+    inset-inline-start: -0.4rem;
+  }
+
+  .auth-welcome__showcase .auth-showcase__floating-card--focus {
+    inset-inline-end: -0.4rem;
+  }
+}
+
+@media (max-width: 56rem) {
+  .auth-welcome__hero {
+    grid-template-columns: 1fr;
+    padding-block-start: 4rem;
+    text-align: center;
+  }
+
+  .auth-welcome__content {
+    max-width: 44rem;
+    padding-inline-start: 0;
+    margin-inline: auto;
+  }
+
+  .auth-welcome__content > p {
+    margin-inline: auto;
+  }
+
+  .auth-welcome__actions,
+  .auth-welcome__features {
+    justify-content: center;
+  }
+
+  .auth-welcome__showcase {
+    width: min(100%, 39rem);
+    min-height: 38rem;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 47.999rem) {
+  .auth-welcome__showcase {
+    display: flex;
+  }
+}
+
+@media (max-width: 36rem) {
+  .auth-welcome__header {
+    min-height: 4.75rem;
+  }
+
+  .auth-welcome__brand small,
+  .auth-welcome__nav-login {
+    display: none;
+  }
+
+  .auth-welcome__logo-window {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .auth-welcome__nav-register {
+    min-height: 2.55rem;
+    padding-inline: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .auth-welcome__hero {
+    min-height: auto;
+    padding-block: 3.5rem 2rem;
+  }
+
+  .auth-welcome__content h1 {
+    font-size: 2.25rem;
+  }
+
+  .auth-welcome__actions {
+    display: grid;
+  }
+
+  .auth-welcome__actions a {
+    width: 100%;
+  }
+
+  .auth-welcome__features {
+    display: grid;
+    justify-content: start;
+    width: fit-content;
+    margin-inline: auto;
+    text-align: start;
+  }
+
+  .auth-welcome__showcase {
+    min-height: 32rem;
+    border-radius: 1.5rem;
+  }
+
+  .auth-welcome__showcase .auth-showcase__content {
+    padding-inline: 0.75rem;
+  }
+
+  .auth-welcome__showcase .auth-showcase__brand {
+    margin-inline-start: 0.75rem;
+  }
+
+  .auth-welcome__showcase .auth-showcase__stage {
+    min-height: 25rem;
+  }
+
+  .auth-welcome__showcase .auth-showcase__floating-card {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-welcome__nav a,
+  .auth-welcome__actions a {
+    transition: none;
+  }
+}
